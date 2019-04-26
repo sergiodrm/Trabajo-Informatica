@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MenuWindow</class>
+ <widget class="QWidget" name="MenuWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>532</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>532</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>532</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>CrossCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Menú principal</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	
+	background: #1E2736;
+	color: rgb(63, 85, 101);
+	font: 9pt &quot;Utsaah&quot;;
+}
+
+QPushButton { 
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0.33, y2: 0, 
+            stop: 0 #1f2837, stop: 1 #1e4562);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(137, 139, 142);
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+
+	color: rgb(137, 139, 142);
+	font: bold 11pt &quot;Utsaah&quot;;
+}
+
+QPushButton:pressed {
+	border-style: inset;
+	border-color: rgb(30, 39, 90);
+}
+
+QToolBox{
+     icon-size: 40px;
+	 background: #1E2736;
+}
+
+QToolBox QScrollArea&gt;QWidget&gt;QWidget
+{
+    background: #1E2736;
+}
+
+QToolBox::tab {
+
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0.33, y2: 0, 
+            stop: 0 #1f2837, stop: 1 #1e4562);
+
+    border-radius: 10px;
+	color: rgb(63, 85, 101);
+	font: 17pt &quot;Utsaah&quot;;
+}
+
+QRadioButton{
+color: rgb(137, 139, 142);
+font-weight: bold;
+}
+QRadioButton::indicator{
+color: rgb(137, 139, 142);
+width: 10px;
+height: 10px;
+background: white;
+border-width: 2px;
+border-style: solid;
+border-radius: 7px;
+}
+
+QRadioButton::indicator:checked
+{
+color: black;
+background: black;
+border-width: 2px;
+border-style: solid;
+border-radius: 7px;
+border-color: white;
+}
+
+QProgressBar
+{
+    background: #74c8ff;
+    color: #0a9dff;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #74c8ff;
+    border-radius: 7px;
+    text-align: left;
+}
+QProgressBar::chunk
+{
+    background-color: #010327;
+}</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>10</y>
+     <width>231</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Características de la nave</string>
+   </property>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>29</y>
+      <width>211</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="imagenNave">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>211</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="3" column="1">
+      <widget class="QProgressBar" name="ataqueEspBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+       <property name="format">
+        <string>%p%</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QProgressBar" name="ataqueBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QProgressBar" name="escudoBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QProgressBar" name="saludBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Salud</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Escudo</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Ataque</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Ataque E</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>9</y>
+     <width>261</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame {
+	border-style: outset;
+	
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Titulo del juego</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolBox" name="toolBox">
+      <property name="cursor">
+       <cursorShape>CrossCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="toolPrincipal">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>243</width>
+         <height>187</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Principal</string>
+       </attribute>
+       <widget class="QPushButton" name="jugarButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>196</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Jugar</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="salirButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>196</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Salir</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="toolSeleccion">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>243</width>
+         <height>187</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Selección de nave</string>
+       </attribute>
+       <widget class="QRadioButton" name="cazaButton">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>40</y>
+          <width>131</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Caza</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="acorazadoButton">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>70</y>
+          <width>141</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Acorazado</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="batallaButton">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>100</y>
+          <width>141</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nave de batalla</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="destructorButton">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>130</y>
+          <width>141</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>Destructor</string>
+        </property>
+       </widget>
+       <zorder>groupBox</zorder>
+       <zorder>cazaButton</zorder>
+       <zorder>acorazadoButton</zorder>
+       <zorder>batallaButton</zorder>
+       <zorder>destructorButton</zorder>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

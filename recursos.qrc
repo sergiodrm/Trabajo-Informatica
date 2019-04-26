@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/caza.png</file>
+    <file>images/acorazado.png</file>
+    <file>images/batalla.png</file>
+    <file>images/destructor.png</file>
+</qresource>
+</RCC>
