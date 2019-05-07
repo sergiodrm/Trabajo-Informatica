@@ -1,0 +1,59 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/caza_menu.png</file>
+    <file>images/caza_U.png</file>
+    <file>images/caza_D.png</file>
+    <file>images/caza_R.png</file>
+    <file>images/caza_L.png</file>
+    <file>images/caza_enemy_U.png</file>
+    <file>images/caza_enemy_D.png</file>
+    <file>images/caza_enemy_R.png</file>
+    <file>images/caza_enemy_L.png</file>
+
+    <file>images/acorazado_menu.png</file>
+    <file>images/acorazado_U.png</file>
+    <file>images/acorazado_D.png</file>
+    <file>images/acorazado_R.png</file>
+    <file>images/acorazado_L.png</file>
+    <file>images/acorazado_enemy_U.png</file>
+    <file>images/acorazado_enemy_D.png</file>
+    <file>images/acorazado_enemy_R.png</file>
+    <file>images/acorazado_enemy_L.png</file>
+
+    <file>images/destructor_menu.png</file>
+    <file>images/destructor_U.png</file>
+    <file>images/destructor_D.png</file>
+    <file>images/destructor_R.png</file>
+    <file>images/destructor_L.png</file>
+    <file>images/destructor_enemy_U.png</file>
+    <file>images/destructor_enemy_D.png</file>
+    <file>images/destructor_enemy_R.png</file>
+    <file>images/destructor_enemy_L.png</file>
+
+    <file>images/warship_menu.png</file>
+    <file>images/warship_U.png</file>
+    <file>images/warship_D.png</file>
+    <file>images/warship_R.png</file>
+    <file>images/warship_L.png</file>
+    <file>images/warship_enemy_U.png</file>
+    <file>images/warship_enemy_D.png</file>
+    <file>images/warship_enemy_R.png</file>
+    <file>images/warship_enemy_L.png</file>
+
+    <file>images/flecha_U.png</file>
+    <file>images/flecha_D.png</file>
+    <file>images/flecha_R.png</file>
+    <file>images/flecha_L.png</file>
+    <file>images/flecha_pressed_U.png</file>
+    <file>images/flecha_pressed_D.png</file>
+    <file>images/flecha_pressed_R.png</file>
+    <file>images/flecha_pressed_L.png</file>
+
+    <file>images/fondo.png</file>
+    <file>images/marcador.png</file>
+    <file>images/obstaculo.png</file>
+    <file>images/portal.png</file>
+    <file>images/mission_data.png</file>
+
+</qresource>
+</RCC>

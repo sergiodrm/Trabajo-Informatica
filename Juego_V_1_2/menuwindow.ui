@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MenuWindow</class>
+ <widget class="QWidget" name="MenuWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>532</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>532</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>532</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>CrossCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Menú principal</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#MenuWindow{
+background-color: rgb(36, 49, 63);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 2px;
+   border-color: black;
+	color: rgb(63, 85, 101);
+	font: 9pt &quot;Small Fonts&quot;;
+}
+
+QFrame#frame{
+    border-style: outset;
+	background-color: rgb(0, 0, 0);
+}
+
+QFrame#frame_3{
+    border-style: outset;
+}
+
+QPushButton#jugarButton { 
+background-color: rgba(72, 73, 88, 255);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 2px;
+   border-color: rgb(137, 139, 142);
+    font: bold 14px;
+    padding: 6px;
+
+	color: rgb(220, 220, 220);
+	font: bold 11pt &quot;Small Fonts&quot;;
+}
+
+
+QPushButton#jugarButton:pressed {
+	border-style: inset;
+	border-color: rgb(30, 39, 90);
+}
+
+QPushButton#salirButton { 
+background-color: rgba(72, 73, 88, 255);
+border-style: outset;
+border-width: 2px;
+border-radius: 2px;
+border-color: rgb(137, 139, 142);
+font: bold 14px;
+padding: 6px;
+
+color: rgb(220, 220, 220);
+font: bold 11pt &quot;Small Fonts&quot;;
+}
+
+QPushButton#salirButton:pressed {
+	border-style: inset;
+	border-color: rgb(30, 39, 90);
+}
+
+QGroupBox#groupBox{
+background-color: rgba(72, 73, 88, 255);
+border-style: outset;
+border-width: 2px;
+border-radius: 2px;
+border-color: rgb(137, 139, 142);
+padding: 6px;
+
+color: rgb(220, 220, 220);
+font: bold 8pt &quot;Small Fonts&quot;;
+}
+
+
+QToolBox{
+     icon-size: 40px;
+	 background: #1E2736;
+}
+
+QToolBox QScrollArea&gt;QWidget&gt;QWidget
+{
+    background-color: rgb(36,49,63);
+}
+
+QToolBox::tab {
+
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(36, 49, 63, 255), stop:1    rgba(72, 73, 88, 255));
+    border-radius: 2px;
+	color: rgb(220, 220, 220);
+	font: 12pt &quot;Small Fonts&quot;;
+}
+
+QRadioButton{
+	color: rgb(220, 220, 220);
+	font: 11pt &quot;Small Fonts&quot;;
+}
+QRadioButton::indicator{
+color: rgb(137, 139, 142);
+width: 10px;
+height: 10px;
+background: white;
+border-width: 2px;
+border-style: solid;
+border-radius: 7px;
+}
+
+QRadioButton::indicator:checked
+{
+color: black;
+background: black;
+border-width: 2px;
+border-style: solid;
+border-radius: 7px;
+border-color: white;
+}
+
+QLabel{
+color:rgb(220, 220, 220);
+	font: 10pt &quot;Small Fonts&quot;;
+}
+
+QProgressBar
+{
+    background: #010327;
+    color: #0a9dff;
+    border-style: outset;
+    border-width: 2px;
+    border-color: rgb(64, 88, 127);
+    border-radius: 2px;
+    text-align: left;
+
+}
+QProgressBar::chunk
+{
+    background-color: rgb(0, 170, 255);
+}
+
+</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>10</y>
+     <width>231</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>9</y>
+      <width>211</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>211</width>
+      <height>131</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>211</width>
+      <height>131</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="imagenNave">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>300</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>211</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>211</width>
+      <height>131</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>211</width>
+      <height>131</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="3" column="1">
+      <widget class="QProgressBar" name="ataqueEspBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+       <property name="format">
+        <string>%p%</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QProgressBar" name="ataqueBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QProgressBar" name="escudoBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QProgressBar" name="saludBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Salud</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Escudo</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Ataque</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>At. Esp</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>9</y>
+     <width>261</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>Small Fonts</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>TINSI</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolBox" name="toolBox">
+      <property name="cursor">
+       <cursorShape>CrossCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="toolPrincipal">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>241</width>
+         <height>188</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Principal</string>
+       </attribute>
+       <widget class="QPushButton" name="jugarButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>201</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>201</width>
+          <height>41</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>201</width>
+          <height>41</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Jugar</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="salirButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>90</y>
+          <width>201</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>201</width>
+          <height>41</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>201</width>
+          <height>41</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Salir</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="toolSeleccion">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>241</width>
+         <height>188</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Selección de nave</string>
+       </attribute>
+       <widget class="QRadioButton" name="cazaButton">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>30</y>
+          <width>141</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Caza</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="acorazadoButton">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>60</y>
+          <width>151</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Acorazado</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="batallaButton">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>90</y>
+          <width>151</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nave de batalla</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="destructorButton">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>120</y>
+          <width>141</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>Destructor</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
