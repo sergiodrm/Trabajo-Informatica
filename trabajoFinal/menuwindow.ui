@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MenuWindow</class>
+ <widget class="QWidget" name="MenuWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>CrossCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Menú principal</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	
+	background: #1E2736;
+	color: rgb(63, 85, 101);
+	font: 10pt &quot;Small Fonts&quot;;
+}
+
+QPushButton { 
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0.33, y2: 0, 
+            stop: 0 #1f2837, stop: 1 #1e4562);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(137, 139, 142);
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+
+	color: rgb(137, 139, 142);
+	font: bold 11pt &quot;Small Fonts&quot;;
+}
+
+QPushButton:pressed {
+	border-style: inset;
+	border-color: rgb(30, 39, 90);
+}
+
+QToolBox{
+     icon-size: 40px;
+	 background: #1E2736;
+}
+
+QToolBox QScrollArea&gt;QWidget&gt;QWidget
+{
+    background: #1E2736;
+}
+
+QToolBox::tab {
+
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0.33, y2: 0, 
+            stop: 0 #1f2837, stop: 1 #1e4562);
+
+    border-radius: 10px;
+	color: rgb(155, 155, 155);
+	font: 14pt &quot;Small Fonts&quot;;
+}
+
+QRadioButton{
+color: rgb(137, 139, 142);
+font-weight: bold;
+}
+QRadioButton::indicator{
+color: rgb(137, 139, 142);
+width: 10px;
+height: 10px;
+background: white;
+border-width: 2px;
+border-style: solid;
+border-radius: 7px;
+}
+
+QRadioButton::indicator:checked
+{
+color: black;
+background: black;
+border-width: 2px;
+border-style: solid;
+border-radius: 7px;
+border-color: white;
+}
+
+QProgressBar
+{
+    background: #010327;
+    color: #0a9dff;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #74c8ff;
+    border-radius: 7px;
+    text-align: left;
+}
+QProgressBar::chunk
+{
+    background-color: rgb(255, 255, 127);
+}</string>
+  </property>
+  <widget class="QGroupBox" name="seleccionNave">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>10</y>
+     <width>331</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Características de la nave</string>
+   </property>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>311</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>311</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="3" column="1">
+      <widget class="QProgressBar" name="ataqueEspBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+       <property name="format">
+        <string>%p%</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QProgressBar" name="ataqueBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QProgressBar" name="escudoBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QProgressBar" name="saludBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;Small Fonts&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>Salud</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;Small Fonts&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>Escudo</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;Small Fonts&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>Ataque</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;Small Fonts&quot;;
+
+</string>
+       </property>
+       <property name="text">
+        <string>At.Esp</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="imagenNave">
+    <property name="geometry">
+     <rect>
+      <x>65</x>
+      <y>60</y>
+      <width>205</width>
+      <height>205</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>205</width>
+      <height>205</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>205</width>
+      <height>205</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0,0,0);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="background_nave">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>271</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0,0,0);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>background_nave</zorder>
+   <zorder>frame_3</zorder>
+   <zorder>imagenNave</zorder>
+  </widget>
+  <widget class="QFrame" name="frame_izq">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>9</y>
+     <width>281</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame {
+	border-style: outset;
+	
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <layout class="QVBoxLayout" name="layout_izq">
+    <property name="spacing">
+     <number>7</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Titulo del juego</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolBox" name="menuseleccion">
+      <property name="cursor">
+       <cursorShape>CrossCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="toolPrincipal">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>259</width>
+         <height>162</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Principal</string>
+       </attribute>
+       <widget class="QPushButton" name="jugarButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>236</width>
+          <height>38</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Jugar</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="salirButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>90</y>
+          <width>236</width>
+          <height>38</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Salir</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="toolSeleccion">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>259</width>
+         <height>162</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Selección de nave</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QRadioButton" name="cazaButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(120, 120, 120);
+font: 14pt &quot;Small Fonts&quot;;
+
+</string>
+          </property>
+          <property name="text">
+           <string>Caza</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="acorazadoButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(120, 120, 120);
+font: 14pt &quot;Small Fonts&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Acorazado</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="batallaButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(120, 120, 120);
+font: 14pt &quot;Small Fonts&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Nave de batalla</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="destructorButton">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(120, 120, 120);
+font: 14pt &quot;Small Fonts&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Destructor</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
