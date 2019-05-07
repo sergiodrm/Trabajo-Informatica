@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameWindow</class>
+ <widget class="QWidget" name="GameWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>646</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1026</width>
+    <height>646</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1026</width>
+    <height>646</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Juego de naves</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#GameWindow{
+background-color: rgb(36, 49, 63);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 2px;
+   border-color: black;
+	color: rgb(63, 85, 101);
+	font: 9pt &quot;Small Fonts&quot;;
+}
+QLCDNumber {
+	
+	color: rgb(6, 176, 37);
+	border-color: rgb(37, 38, 91);
+	background-color:rgb(85, 85, 127);
+}
+
+QPushButton#upButton {
+border-image: url(:/images/flecha_U.png);
+}
+
+QPushButton#upButton:pressed {
+border-image: url(:/images/flecha_pressed_U.png);
+}
+
+QPushButton#downButton {
+border-image: url(:/images/flecha_D.png);
+}
+
+QPushButton#downButton:pressed {
+border-image: url(:/images/flecha_pressed_D.png);
+}
+
+QPushButton#leftButton {
+border-image: url(:/images/flecha_L.png);
+}
+
+QPushButton#leftButton:pressed {
+border-image: url(:/images/flecha_pressed_L.png);
+}
+
+QPushButton#rightButton {
+border-image: url(:/images/flecha_R.png);
+}
+
+QPushButton#rightButton:pressed {
+border-image: url(:/images/flecha_pressed_R.png);
+}
+
+QPushButton#atacarButton { 
+background-color: rgba(72, 73, 88, 255);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 2px;
+   border-color: rgb(137, 139, 142);
+    padding: 6px;
+
+	color: rgb(220, 220, 220);
+	font: bold 11pt &quot;Small Fonts&quot;;
+}
+
+QPushButton#atacarEspButton { 
+background-color: rgba(72, 73, 88, 255);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 2px;
+   border-color: rgb(137, 139, 142);
+    padding: 6px;
+
+	color: rgb(220, 220, 220);
+	font: bold 10pt &quot;Small Fonts&quot;;
+}
+
+QPushButton#habilidadButton { 
+background-color: rgba(72, 73, 88, 255);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 2px;
+   border-color: rgb(137, 139, 142);
+    font: bold 14px;
+    padding: 6px;
+
+	color: rgb(220, 220, 220);
+	font: bold 11pt &quot;Small Fonts&quot;;
+}
+
+QPushButton#terminarTurnoButton { 
+background-color: rgba(72, 73, 88, 255);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 2px;
+   border-color: rgb(137, 139, 142);
+    font: bold 14px;
+    padding: 6px;
+
+	color: rgb(220, 220, 220);
+	font: bold 11pt &quot;Small Fonts&quot;;
+}
+
+QPushButton#atacarButton:pressed {
+	border-style: inset;
+	border-color: rgb(30, 39, 90);
+}
+
+QPushButton#habilidadButton:pressed {
+	border-style: inset;
+	border-color: rgb(30, 39, 90);
+}
+
+
+QPushButton#terminarTurnoButton:pressed {
+	border-style: inset;
+	border-color: rgb(30, 39, 90);
+}
+
+QGroupBox#groupBox {
+background-color: rgba(72, 73, 88, 255);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 2px;
+   border-color: rgb(137, 139, 142);
+    padding: 6px;
+color: rgb(220, 220, 220);
+font:  8pt &quot;Small Fonts&quot;;
+}
+
+QGroupBox#groupBox_2 {
+ 
+background-color: rgba(72, 73, 88, 255);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 2px;
+   border-color: rgb(137, 139, 142);
+    padding: 6px;
+color: rgb(220, 220, 220);
+font: 8pt &quot;Small Fonts&quot;;
+}
+
+QGroupBox#groupBox_3 {
+border-style: outlet;
+border-color: transparent;
+background-color: transparent;
+color: rgb(220, 220, 220);
+font:  8pt &quot;Small Fonts&quot;;
+}
+
+QLabel{
+color: rgb(220, 220, 220);
+font:  10pt &quot;Small Fonts&quot;;
+
+}
+
+QLine {
+background-color: transparent;
+}
+
+QMessageBox{
+background-color: rgb(36, 49, 63);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 2px;
+   border-color: black;
+	color: rgb(63, 85, 101);
+	font: 12pt &quot;Small Fonts&quot;;
+}
+
+QPushButton{
+background-color: rgba(72, 73, 88, 255);
+	border-style: outset;
+    border-width: 2px;
+    border-radius: 2px;
+   border-color: rgb(137, 139, 142);
+    font: bold 14px;
+    padding: 6px;
+
+	color: rgb(220, 220, 220);
+	font: bold 11pt &quot;Small Fonts&quot;;
+}
+
+
+QPushButton:pressed {
+	border-style: inset;
+	border-color: rgb(30, 39, 90);
+}
+
+QProgressBar{
+background-color: rgb(0, 0, 0);
+border: 2px solid grey;
+}
+QProgressBar:chunk{
+background-color: rgb(170, 0, 0);
+}
+
+</string>
+  </property>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>25</y>
+     <width>11</width>
+     <height>596</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>230</y>
+     <width>261</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Small Fonts</family>
+     <pointsize>8</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="title">
+    <string>Jugador</string>
+   </property>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Small Fonts</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Atq.Esp</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Small Fonts</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ataque</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="escudoBar">
+    <property name="geometry">
+     <rect>
+      <x>87</x>
+      <y>50</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Small Fonts</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Salud</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="atqBar">
+    <property name="geometry">
+     <rect>
+      <x>87</x>
+      <y>80</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="saludBar">
+    <property name="geometry">
+     <rect>
+      <x>87</x>
+      <y>20</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Small Fonts</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Escudo</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="atqespBar">
+    <property name="geometry">
+     <rect>
+      <x>87</x>
+      <y>110</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="posXLCD">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>180</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Small Fonts</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Posicion</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="posYLCD">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>180</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="paLCD">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>140</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Small Fonts</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>P.Accion</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="habilidadButton">
+    <property name="geometry">
+     <rect>
+      <x>149</x>
+      <y>140</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>POWER</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>450</y>
+     <width>261</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Small Fonts</family>
+     <pointsize>8</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="title">
+    <string>Enemigo</string>
+   </property>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Small Fonts</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Atq.Esp</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Small Fonts</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ataque</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="escudoBar_enemigo">
+    <property name="geometry">
+     <rect>
+      <x>87</x>
+      <y>50</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Small Fonts</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Salud</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="atqBar_enemigo">
+    <property name="geometry">
+     <rect>
+      <x>87</x>
+      <y>80</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="saludBar_enemigo">
+    <property name="geometry">
+     <rect>
+      <x>87</x>
+      <y>20</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Small Fonts</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Escudo</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="atqespBar_enemigo">
+    <property name="geometry">
+     <rect>
+      <x>87</x>
+      <y>110</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="posXLCD_enemigo">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>140</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Small Fonts</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Posicion</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="posYLCD_enemigo">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>140</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>60</y>
+     <width>271</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Small Fonts</family>
+     <pointsize>8</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QPushButton" name="leftButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>100</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushBtton{
+border-image: url(:/images/flecha_L.png);
+}
+
+QPushButton:pressed{
+border-image: url(:/images/flecha_pressed_L.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="downButton">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>100</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="atacarButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>80</width>
+      <height>61</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>80</width>
+      <height>61</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Atacar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="upButton">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>30</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rightButton">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>100</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="atacarEspButton">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>30</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>80</width>
+      <height>61</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>80</width>
+      <height>61</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>At. Esp</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLCDNumber" name="turnoLCD">
+   <property name="geometry">
+    <rect>
+     <x>893</x>
+     <y>10</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>3</y>
+     <width>720</width>
+     <height>640</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>720</width>
+     <height>640</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>720</width>
+     <height>640</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/fondo.png);
+border-color: rgb(0, 85, 127);
+border-width: 2px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="terminarTurnoButton">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>10</y>
+     <width>120</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>51</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>51</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Fin turno</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>10</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Small Fonts</family>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>RONDA</string>
+   </property>
+  </widget>
+  <zorder>label_13</zorder>
+  <zorder>line</zorder>
+  <zorder>groupBox</zorder>
+  <zorder>groupBox_2</zorder>
+  <zorder>groupBox_3</zorder>
+  <zorder>turnoLCD</zorder>
+  <zorder>terminarTurnoButton</zorder>
+  <zorder>label_12</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
